@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/index.css">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_603793_7zxv8n2uevasv2t9.css">
+	<script src="js/rem.js"></script>
+	<script src="js/jquery3.2.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<link rel="shortcut icon" href="img/logo.png">
+	<title>天气</title>
+</head>
+<body>
+<div class="bg">
+	<!-- 头部开始 -->
+	<header>
+		<div class="city" id="city">北京市</div>
+		<div class="wuran">
+			<h1>空气</h1>
+			<h2>轻度污染</h2>
+		</div>
+		<h3 class="temperature">10°</h3>
+		<h4 class="weather">晴</h4>
+		<div class="humid">
+			<span class="humid_left">湿度</span>
+			<div class="humid_right">57%</div>
+		</div>
+		<div class="wish">你愿安好，便是晴天～</div>
+	</header>
+	<!-- 头部结束 -->
+	<!-- section1开始 -->
+	<section class="recent" >
+		<div class="days">
+			<div class="today">
+				<div class="today_top">
+					<div class="text">今天</div>
+					<div class="temperature_box">
+					<span class="high">17</span>
+					<span>/</span>
+					<span class="low">3°</span>
+					</div>
+				</div>
+				<div class="today_bottom">
+					<div class="bottom_left">晴转多云</div>
+					<div class="bottom_right" id="dat_weather_icon_id"></div>
+				</div>
+			</div>
+			<div class="tomorrow">
+				<div class="today_top">
+					<div class="text">明天</div>
+					<div class="temperature_box">
+					<span class="high" id="tomorrow_high_temperature">17</span>
+					<span>/</span>
+					<span class="low" id="tomorrow_low_temperature">5°</span>
+					</div>
+				</div>
+				<div class="today_bottom">
+					<div class="bottom_left" id="tomorrow_condition">多云</div>
+					<div class="bottom_right" id="tomorrow_weather_icon_id"></div>
+			</div>
+			</div>
+		</div>
+	</section>
+	<!-- section1结束 -->
+	<!-- 未来24小时天气情况 -->
+	<section class="hours">
+		<div class="wrap"></div>
+	</section>
+	<!-- 近期天气开始 -->
+	<section class="near" > 
+		<div class="wrap1"></div>
+	</section>
+	<!-- 近期天气结束 -->
+	<!-- 提醒开始-->
+	<ul class="about">
+		<li class="icon1">
+			<i class="iconfont icon-chepai"></i>
+			<h1 class="shu">3和8</h1>
+			<span>尾车限行</span>
+		</li>
+		<li class="icon2">
+			<i class="iconfont icon-changxiu"></i>
+			<h1 class="shu">较冷</h1>
+			<span>穿衣</span>
+		</li>
+		<li class="icon3">
+			<i class="iconfont icon-san"></i>
+			<h1 class="shu">不带伞</h1>
+			<span>雨伞</span>
+		</li>
+		<li class="icon4">
+			<i class="iconfont icon-menzhenxiyao"></i>
+			<h1 class="shu">较易发</h1>
+			<span>感冒</span>
+		</li>
+		<li class="icon5">
+			<i class="iconfont icon-xiche"></i>
+			<h1 class="shu">较适宜</h1>
+			<span>洗车</span>
+		</li>
+		<li class="icon6">
+			<i class="iconfont icon-lanqiu"></i>
+			<h1 class="shu">适宜</h1>
+			<span>运动</span>
+		</li>
+		<li class="icon7">
+			<i class="iconfont icon-taiyang-copy"></i>
+			<h1 class="shu">较弱</h1>
+			<span>防晒</span>
+		</li>
+		<li class="icon8">
+			<i class="iconfont icon-yu"></i>
+			<h1 class="shu">适宜</h1>
+			<span>钓鱼</span>
+		</li>
+	</ul>
+	<!-- 提醒结束-->
+	<!-- 底部开始 -->
+	<footer>
+		<div class="footertop">
+			<div class="footertop_left">数据来源于中国天气网</div>
+			<div class="footertop_right">
+				<h1>反馈</h1>
+				<span>|</span>
+				<h2>举报中心</h2>
+			</div>
+		</div>
+		<div class="footerbottom">Copyright © 1998 - 2018 Tencent. All Rights Reserved</div>
+	</footer>
+	<!-- 底部结束 -->
+</div>
+
+
+	<section class="location" id="location">
+		<div class="search">
+			<div class="search_box">
+				<div class="search_left">
+					<i class="iconfont icon-sousuo"></i>
+					<input type="text" placeholder="搜索地区/景点" class="bot">
+				</div>
+				<div class="search_right" id="quxiao">取消</div>
+			</div>
+		</div>
+		<div class="hotCity">
+			 <h1 class="hotCity_top">热门城市</h1>
+			 <div class="hotCity_box">
+				 <div class="hotCity_son">北京</div>
+				 <div class="hotCity_son">上海</div>
+				 <div class="hotCity_son">广州</div>
+				 <div class="hotCity_son">深圳</div>
+				 <div class="hotCity_son">郑州</div>
+				 <div class="hotCity_son">西安</div>
+				 <div class="hotCity_son">南京</div>
+				 <div class="hotCity_son">杭州</div>
+				 <div class="hotCity_son">武汉</div>
+				 <div class="hotCity_son">成都</div>
+				 <div class="hotCity_son">沈阳</div>
+				 <div class="hotCity_son">天津</div>
+				 <div class="hotCity_son">晋城</div>
+				 <div class="hotCity_son">吕梁</div>
+				 <div class="hotCity_son">晋中</div>
+			 </div>
+		</div>
+	</section>
+</body>
+</html>
